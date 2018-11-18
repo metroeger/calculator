@@ -1,4 +1,4 @@
-package swingcalculator;
+package calculator;
 
 import java.awt.Button;
 import java.lang.reflect.Array;
@@ -365,7 +365,7 @@ public class CalculatorMain extends javax.swing.JFrame {
                 break;
         }
         displayNum(result);
-        //value = result + "";
+        first = "";
     }//GEN-LAST:event_btnEqualsActionPerformed
 
     private void btnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivideActionPerformed
@@ -422,7 +422,11 @@ public class CalculatorMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlusActionPerformed
 
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
+        if (value.length()<1){
+            value+= "-";
+        }else{
         setOperator('-');
+        }
     }//GEN-LAST:event_btnMinusActionPerformed
 
     private void btnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplyActionPerformed
